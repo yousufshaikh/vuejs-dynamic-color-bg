@@ -11,7 +11,7 @@
 </head>
 <body>
     <div id="app">
-        <div class="container">
+        <!-- <div class="container">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="jumbotron text-center custom-style extra-margin" v-bind:style="bgc">
@@ -20,13 +20,17 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="container">
             <div class="row extra-margin">
                 <div class="col-lg-12 text-center">
                     <div class="content">
-                        <h2 class="description">{{description}}</h2>
-                        <input type="text" v-on:input="bgc.backgroundColor = $event.target.value">
+                        <h2 class="description" v-bind:style="styleObj">{{description}}</h2>
+                        <input type="text" v-on:input="styleObj.color = $event.target.value">
+                    </div>
+                    <br>
+                    <div>
+                        <h1><code>Vue.js</code></h1>                        
                     </div>
                 </div>
             </div>
